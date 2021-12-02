@@ -1,0 +1,13 @@
+{
+  "name": "adventofcode2021",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Solved Puzzles for Advent of Code 2021",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Amruth Pillai <im.amruth@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0"
+  }
+}
