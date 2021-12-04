@@ -1,6 +1,6 @@
-### Day 4: Giant Squid
+# Day 4: Giant Squid
 
-#### Part One
+## Part One
 
 You're already almost 1.5km (almost a mile) below the surface of the ocean, already so deep that you can't see any sunlight. What you can see, however, is a giant squid that has attached itself to the outside of your submarine.
 
@@ -70,7 +70,7 @@ To guarantee victory against the giant squid, figure out which board will win fi
 
 **Your puzzle answer was 14093.**
 
-#### Part Two
+## Part Two
 
 On the other hand, it might be wise to try a different strategy: let the giant squid win.
 

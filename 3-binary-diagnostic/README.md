@@ -1,6 +1,6 @@
-### Day 3: Binary Diagnostic
+# Day 3: Binary Diagnostic
 
-#### Part One
+## Part One
 
 The submarine has been making some odd creaking noises, so you ask it to produce a diagnostic report just in case.
 
@@ -39,7 +39,7 @@ Use the binary numbers in your diagnostic report to calculate the gamma rate and
 
 **Your puzzle answer was 2954600.**
 
-#### Part Two
+## Part Two
 
 Next, you should verify the life support rating, which can be determined by multiplying the oxygen generator rating by the CO2 scrubber rating.
 
