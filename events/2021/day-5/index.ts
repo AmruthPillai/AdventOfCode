@@ -1,22 +1,19 @@
-import { URL } from "url";
-import { readFile } from "fs/promises";
+import { generateMatrix, Matrix } from "@helpers/matrix";
 
-// Helper Function to Generate a Matrix
-const generateMatrix = (rows, columns, fill = 0) => {
-  const matrix = [];
+interface LineSegment {
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+}
 
-  for (let i = 0; i <= rows; i++) {
-    matrix[i] = [];
-    for (let j = 0; j <= columns; j++) {
-      matrix[i][j] = fill;
-    }
-  }
-
-  return matrix;
-};
-
-// Helper Function to Get Intermediate Points given a Line Segment
-const getPointsFromLineSegment = ({ x1, y1, x2, y2 }) => {
+// Get Intermediate Points given a Line Segment
+const getPointsFromLineSegment = ({
+  x1,
+  y1,
+  x2,
+  y2,
+}: LineSegment): Matrix<number> => {
   let result = [
     [x1, y1],
     [x2, y2],
@@ -73,10 +70,13 @@ const getPointsFromLineSegment = ({ x1, y1, x2, y2 }) => {
   return result;
 };
 
-// Helper Function to get Line Segments from Input
-const getLineSegmentsFromInput = (inputLines, includeDiagonals = false) => {
-  let matrixSize = 0;
-  let lineSegments = inputLines
+// Extract Line Segments from Input
+const getLineSegments = (
+  inputLines: string[],
+  { includeDiagonals = false }
+): [LineSegment[], number] => {
+  let matrixSize: number = 0;
+  let lineSegments: LineSegment[] = inputLines
     // Return coordinates of the line segments
     .map((line) => {
       const [from, to] = line.split(" -> ");
@@ -99,29 +99,21 @@ const getLineSegmentsFromInput = (inputLines, includeDiagonals = false) => {
   return [lineSegments, matrixSize];
 };
 
-const main = async () => {
-  // Get input data from raw text file
-  const inputData = await readFile(
-    new URL("input.txt", import.meta.url),
-    "utf-8"
-  );
-
-  // Split Input by Lines to get Line Pairs
-  const inputLines = inputData.split("\n");
-
-  let [lineSegments, matrixSize] = getLineSegmentsFromInput(inputLines, true);
-
+const countLineOverlap = (
+  lineSegments: LineSegment[],
+  matrixSize: number
+): number => {
   // Generate intermediate points given a line segment
-  let pointsToBeMarked = [];
-  for (let line of lineSegments) {
+  const pointsToBeMarked = [];
+  for (const line of lineSegments) {
     pointsToBeMarked.push(...getPointsFromLineSegment(line));
   }
 
   // Construct a matrix of SxS filled with 0s
-  let matrix = generateMatrix(matrixSize, matrixSize, 0);
+  const matrix = generateMatrix(matrixSize, matrixSize, 0);
 
   // Traverse through coordinates and increment matrix by paths that have been crossed
-  for (let point of pointsToBeMarked) {
+  for (const point of pointsToBeMarked) {
     const [i, j] = point;
     matrix[j][i] += 1;
   }
@@ -129,6 +121,7 @@ const main = async () => {
   // Traverse through the matrix and count the number of points that have
   // an overlap of greater than 2
   let overlapCount = 0;
+
   for (let i = 0; i < matrix.length; i++) {
     for (let j = 0; j < matrix[i].length; j++) {
       if (matrix[i][j] > 1) {
@@ -137,38 +130,27 @@ const main = async () => {
     }
   }
 
-  // Print Result to Console
-  console.log("Result (Part One):", { overlapCount });
-
-  // Reinitialize Variables
-  overlapCount = 0;
-  pointsToBeMarked = [];
-  matrix = generateMatrix(matrixSize, matrixSize, 0);
-  [lineSegments, matrixSize] = getLineSegmentsFromInput(inputLines, false);
-
-  // Generate intermediate points given a line segment
-  for (let line of lineSegments) {
-    pointsToBeMarked.push(...getPointsFromLineSegment(line));
-  }
-
-  // Traverse through coordinates and increment matrix by paths that have been crossed
-  for (let point of pointsToBeMarked) {
-    const [i, j] = point;
-    matrix[j][i] += 1;
-  }
-
-  // Traverse through the matrix and count the number of points that have
-  // an overlap of greater than 2
-  for (let i = 0; i < matrix.length; i++) {
-    for (let j = 0; j < matrix[i].length; j++) {
-      if (matrix[i][j] > 1) {
-        overlapCount++;
-      }
-    }
-  }
-
-  // Print Result to Console
-  console.log("Result (Part Two):", { overlapCount });
+  return overlapCount;
 };
 
-main();
+export const partOne = (input: string): number => {
+  // Split Input by Lines to get Line Pairs
+  const inputLines = input.split("\n");
+
+  const [lineSegments, matrixSize] = getLineSegments(inputLines, {
+    includeDiagonals: true,
+  });
+
+  return countLineOverlap(lineSegments, matrixSize);
+};
+
+export const partTwo = (input: string): number => {
+  // Split Input by Lines to get Line Pairs
+  const inputLines = input.split("\n");
+
+  const [lineSegments, matrixSize] = getLineSegments(inputLines, {
+    includeDiagonals: false,
+  });
+
+  return countLineOverlap(lineSegments, matrixSize);
+};
