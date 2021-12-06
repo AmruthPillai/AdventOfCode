@@ -1,3 +1,10 @@
 import { readFileSync } from "fs";
 
-export const readFile = (filepath: string) => readFileSync(filepath, "utf-8");
+/**
+ * Helper function to get contents of a file
+ *
+ * @param  {string} filepath
+ * @returns {string}
+ */
+export const readFile = (filepath: string): string =>
+  readFileSync(filepath, "utf-8");

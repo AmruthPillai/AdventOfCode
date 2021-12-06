@@ -1,25 +1,33 @@
 import { sum } from "@helpers/arrays";
 
 export const partOne = (input: string): number => {
+  // Process text file to an array, parse each input as integers
   const measurements = input.split("\n").map(Number);
 
-  let counter = 0;
+  // Initialize counter
+  let increaseCounter = 0;
 
+  // Loop through input array (sliding window)
   for (let i = 1; i < measurements.length; i++) {
+    // Determine whether the sum increases or decreases
     if (measurements[i - 1] < measurements[i]) {
-      counter++;
+      increaseCounter++;
     }
   }
 
-  return counter;
+  return increaseCounter;
 };
 
 export const partTwo = (input: string): number => {
+  // Process text file to an array, parse each input as integers
   const measurements = input.split("\n").map(Number);
 
-  let counter = 0;
+  // Initialize counter
+  let increaseCounter = 0;
 
+  // Loop through input array (size-3 sliding window)
   for (let i = 3; i < measurements.length; i++) {
+    // Get the first and second 3-size sliding windows
     const firstWindow = [
       measurements[i - 3],
       measurements[i - 2],
@@ -31,18 +39,15 @@ export const partTwo = (input: string): number => {
       measurements[i],
     ];
 
-    // ES6
-    // [].map; // [1, 2, 3](n) -> [1, 4, 9](n) // input.length === output.length
-    // [].filter; // [1, 2, 3, 4](n) -> [2, 4](m) // input.length !== output.length
-    // [].reduce; // [1, 2, 3](n) -> 6(1) // input.length => 1
-
+    // Calculate the sum of the inputs in each each window
     const firstWindowSum = sum(firstWindow);
     const secondWindowSum = sum(secondWindow);
 
+    // Determine whether the sum increases or decreases
     if (firstWindowSum < secondWindowSum) {
-      counter++;
+      increaseCounter++;
     }
   }
 
-  return counter;
+  return increaseCounter;
 };

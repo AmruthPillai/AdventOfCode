@@ -1,7 +1,13 @@
 // Typings for 2-dimensional array/matrix data structure
 export type Matrix<T> = Array<Array<T>>;
 
-// Return true if two matrices are identical, otherwise false
+/**
+ * Helper function to check if two matrices are identical
+ *
+ * @param  {Matrix<any>} matrix1
+ * @param  {Matrix<any>} matrix2
+ * @returns {boolean}
+ */
 export const checkMatrixEquality = (
   matrix1: Matrix<any>,
   matrix2: Matrix<any>
@@ -24,14 +30,26 @@ export const checkMatrixEquality = (
   return true;
 };
 
-// Calculate the sum of all numbers in a matrix
+/**
+ * Helper function to calculate the sum of all numbers in a matrix
+ *
+ * @param  {Matrix<number>} matrix
+ * @returns {number}
+ */
 export const calculateMatrixSum = (matrix: Matrix<number>): number =>
   matrix
     .flat()
     .filter((x) => x != null)
     .reduce((sum, item) => sum + item, 0);
 
-// Generate a matrix, given it's size and default value
+/**
+ * Helper function to generate a zero matrix of dimension `rows` x `columns`
+ *
+ * @param  {number} rows
+ * @param  {number=rows} columns
+ * @param  {any=0} fill
+ * @returns {number}
+ */
 export const generateMatrix = (
   rows: number,
   columns: number = rows,
