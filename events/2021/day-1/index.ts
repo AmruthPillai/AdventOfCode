@@ -1,3 +1,5 @@
+import { sum } from "@helpers/arrays";
+
 export const partOne = (input: string): number => {
   // Process text file to an array, parse each input as integers
   const measurements = input.split("\n").map(Number);
@@ -38,8 +40,8 @@ export const partTwo = (input: string): number => {
     ];
 
     // Calculate the sum of the inputs in each each window
-    const firstWindowSum = firstWindow.reduce((a, b) => a + b, 0);
-    const secondWindowSum = secondWindow.reduce((a, b) => a + b, 0);
+    const firstWindowSum = sum(firstWindow);
+    const secondWindowSum = sum(secondWindow);
 
     // Determine whether the sum increases or decreases
     if (firstWindowSum < secondWindowSum) {
