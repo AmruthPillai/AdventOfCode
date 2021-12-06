@@ -2,6 +2,8 @@
 
 A humble documentation of my attempts at solving the Advent of Code each year, written in **Typescript**.
 
+![Run Tests](https://github.com/AmruthPillai/AdventOfCode/actions/workflows/run-tests.yml/badge.svg)
+
 | Year                 |
 | -------------------- |
 | [2015](/events/2015) |
