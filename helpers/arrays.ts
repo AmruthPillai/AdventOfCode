@@ -20,6 +20,7 @@ export const sum = (array: number[]): number =>
 
 /**
  * Helper function to count the number of repeated items in an array
+ *
  * @param  {T[]} array
  * @returns {Record<T, number>}
  */
