@@ -9,3 +9,4 @@
 | 3   | Binary Diagnostic    | [Reference](https://adventofcode.com/2021/day/3) / [Solution](/events/2021/day-3/index.ts) |
 | 4   | Giant Squid          | [Reference](https://adventofcode.com/2021/day/4) / [Solution](/events/2021/day-4/index.ts) |
 | 5   | Hydrothermal Venture | [Reference](https://adventofcode.com/2021/day/5) / [Solution](/events/2021/day-5/index.ts) |
+| 6   | Lanternfish          | [Reference](https://adventofcode.com/2021/day/6) / [Solution](/events/2021/day-6/index.ts) |
