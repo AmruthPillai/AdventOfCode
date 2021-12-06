@@ -1,4 +1,4 @@
-import { calculateSum } from "@helpers/arrays";
+import { sum } from "@helpers/arrays";
 
 interface AreaProps {
   l: number;
@@ -32,7 +32,7 @@ export const partOne = (input: string): number => {
     return surfaceArea + minArea;
   });
 
-  return calculateSum(results);
+  return sum(results);
 };
 
 export const partTwo = (input: string): number => {
@@ -50,5 +50,5 @@ export const partTwo = (input: string): number => {
     return ribbonArea + bowArea;
   });
 
-  return calculateSum(results);
+  return sum(results);
 };
