@@ -47,7 +47,7 @@ export const calculateMatrixSum = (matrix: Matrix<number>): number =>
  *
  * @param  {number} rows
  * @param  {number=rows} columns
- * @param  {any=0} fill
+ * @param  {any = 0} fill
  * @returns {number}
  */
 export const generateMatrix = (

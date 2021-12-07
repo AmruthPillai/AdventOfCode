@@ -3,7 +3,7 @@
  * Can be used to loop over numbers, generate placholder arrays, etc.
  *
  * @param  {number} size
- * @param  {T=null} fill
+ * @param  {T = null} fill
  * @returns {Array<T>}
  */
 export const range = <T = any>(size: number, fill: T = null): Array<T> =>
