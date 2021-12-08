@@ -9,3 +9,4 @@
 | 3   | Perfectly Spherical Houses in a Vacuum | [Reference](https://adventofcode.com/2015/day/3) / [Solution](/events/2015/day-3/index.ts) |
 | 4   | The Ideal Stocking Stuffer             | [Reference](https://adventofcode.com/2015/day/4) / [Solution](/events/2015/day-4/index.ts) |
 | 5   | Doesn't He Have Intern-Elves For This? | [Reference](https://adventofcode.com/2015/day/5) / [Solution](/events/2015/day-5/index.ts) |
+| 6   | Probably a Fire Hazard                 | [Reference](https://adventofcode.com/2015/day/6) / [Solution](/events/2016/day-6/index.ts) |

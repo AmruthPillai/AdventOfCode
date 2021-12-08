@@ -1,7 +1,7 @@
 import { join } from "path";
 import { readFile } from "@helpers/files";
 
-import { partOne, partTwo } from ".";
+import { partOne, partTwo } from "./index";
 
 describe("AoC 2021 / Day 6: Lanternfish", () => {
   const sample = readFile(join(__dirname, "sample.txt"));

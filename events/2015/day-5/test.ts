@@ -1,7 +1,7 @@
 import { readFile } from "@helpers/files";
 import { join } from "path";
 
-import { partOne, partTwo } from ".";
+import { partOne, partTwo } from "./index";
 
 describe("AoC 2015 / Day 5: Doesn't He Have Intern-Elves For This?", () => {
   const input = readFile(join(__dirname, "input.txt"));

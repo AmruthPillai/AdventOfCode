@@ -50,12 +50,12 @@ export const calculateMatrixSum = (matrix: Matrix<number>): number =>
  * @param  {any = 0} fill
  * @returns {number}
  */
-export const generateMatrix = (
+export const generateMatrix = <T = number>(
   rows: number,
   columns: number = rows,
   fill: any = 0
-): Matrix<any> => {
-  const matrix: Matrix<any> = [];
+): Matrix<T> => {
+  const matrix: Matrix<T> = [];
 
   for (let i = 0; i <= rows; i++) {
     matrix[i] = [];

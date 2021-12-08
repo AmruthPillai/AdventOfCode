@@ -1,7 +1,7 @@
 import { readFile } from "@helpers/files";
 import { join } from "path";
 
-import { partOne, partTwo } from ".";
+import { partOne, partTwo } from "./index";
 
 describe("AoC 2021 / Day 3: Binary Diagnostic", () => {
   const sample = readFile(join(__dirname, "sample.txt"));

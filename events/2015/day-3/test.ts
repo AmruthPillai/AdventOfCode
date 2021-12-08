@@ -1,7 +1,7 @@
 import { readFile } from "@helpers/files";
 import { join } from "path";
 
-import { partOne, partTwo } from ".";
+import { partOne, partTwo } from "./index";
 
 describe("AoC 2015 / Day 3: Perfectly Spherical Houses in a Vacuum", () => {
   const input = readFile(join(__dirname, "input.txt"));
