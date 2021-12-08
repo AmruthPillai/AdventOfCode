@@ -1,3 +1,5 @@
+import { Matrix } from "./matrix";
+
 /**
  * Helper function to return an array of size N
  * Can be used to loop over numbers, generate placholder arrays, etc.
@@ -26,3 +28,29 @@ export const sum = (array: number[]): number =>
  */
 export const countBy = (array: any[]): Record<any, number> =>
   array.reduce((acc, val) => ({ ...acc, [val]: acc[val] + 1 || 1 }), {});
+
+/**
+ * Helper function to generate permutations given an array
+ *
+ * @param  {T[]} array
+ * @returns {Matrix<T>}
+ */
+export const permutator = <T>(array: T[]): Matrix<T> => {
+  const result: Matrix<T> = [];
+
+  const permute = (arr: T[], memo: T[] = []) => {
+    if (arr.length === 0) {
+      result.push(memo);
+    } else {
+      for (let i = 0; i < arr.length; i++) {
+        const curr = arr.slice();
+        const next = curr.splice(i, 1);
+        permute(curr.slice(), memo.concat(next));
+      }
+    }
+  };
+
+  permute(array);
+
+  return result;
+};
