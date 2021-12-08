@@ -4,6 +4,7 @@
   },
   "compilerOptions": {
     "baseUrl": ".",
+    "target": "es6",
     "esModuleInterop": true,
     "paths": {
       "@tests/*": ["tests/*"],

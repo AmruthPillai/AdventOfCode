@@ -11,3 +11,4 @@
 | 5   | Hydrothermal Venture    | [Reference](https://adventofcode.com/2021/day/5) / [Solution](/events/2021/day-5/index.ts)                                            |
 | 6   | Lanternfish             | [Reference](https://adventofcode.com/2021/day/6) / [Solution](/events/2021/day-6/index.ts)                                            |
 | 7   | The Treachery of Whales | [Reference](https://adventofcode.com/2021/day/7) / [Solution](/events/2021/day-7/index.ts)                                            |
+| 8   | Seven Segment Search    | [Reference](https://adventofcode.com/2021/day/8) / [Solution](/events/2021/day-8/index.ts)                                            |
