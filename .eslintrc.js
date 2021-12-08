@@ -23,6 +23,7 @@ module.exports = {
   ],
   plugins: ["@typescript-eslint", "import"],
   rules: {
+    "no-bitwise": "off",
     "no-console": "off",
     "no-plusplus": "off",
     "no-return-assign": "off",
