@@ -11,8 +11,6 @@ const parseCircuit = (input: string): Circuit =>
   }, new Map());
 
 const getEmulatedSignal = (circuit: Circuit, wire: Wire): number => {
-  console.log(circuit);
-
   const emulate = memoize((nWire: Wire): number => {
     if (/^(\d)+$/.test(nWire)) {
       return Number(nWire);
