@@ -13,3 +13,4 @@
 | 7   | The Treachery of Whales | [Reference](https://adventofcode.com/2021/day/7) / [Solution](/events/2021/day-7/index.ts)                                            |
 | 8   | Seven Segment Search    | [Reference](https://adventofcode.com/2021/day/8) / [Solution](/events/2021/day-8/index.ts)                                            |
 | 9   | Smoke Basin             | [Reference](https://adventofcode.com/2021/day/9) / [Solution](/events/2021/day-9/index.ts)                                            |
+| 10  | Syntax Scoring          | [Reference](https://adventofcode.com/2021/day/10) / [Solution](/events/2021/day-10/index.ts)                                          |
