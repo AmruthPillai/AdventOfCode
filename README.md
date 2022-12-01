@@ -7,6 +7,7 @@ A humble documentation of my attempts at solving the Advent of Code each year, w
 | Year                 |
 | -------------------- |
 | [2015](/events/2015) |
+| [2020](/events/2020) |
 | [2021](/events/2021) |
 | [2022](/events/2022) |
 
