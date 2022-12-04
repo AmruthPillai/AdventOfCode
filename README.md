@@ -41,6 +41,6 @@ $ pnpm test
 
 To run any specific tests, you can also use pattern matching:
 ```sh
-$ pnpm t 2015 # Run tests for all challenges from AoC 2015
-$ pnpm t 2015/day-4 # Run tests for day 4 challenge from AoC 2015
+$ pnpm t 2021 # Run tests for all challenges from AoC 2021
+$ pnpm t 2021/day-4 # Run tests for day 4 challenge from AoC 2021
 ```
