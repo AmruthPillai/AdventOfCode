@@ -32,6 +32,7 @@ module.exports = {
     "consistent-return": "off",
     "no-param-reassign": "off",
     "no-restricted-syntax": "off",
+    "no-prototype-builtins": "off",
     "no-unused-expressions": "off",
     "import/prefer-default-export": "off",
     "import/extensions": [
