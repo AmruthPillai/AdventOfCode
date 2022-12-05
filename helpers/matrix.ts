@@ -48,7 +48,7 @@ export const calculateMatrixSum = (matrix: Matrix<number>): number =>
  * @param  {number} rows
  * @param  {number=rows} columns
  * @param  {any = 0} fill
- * @returns {number}
+ * @returns {Matrix<T>}
  */
 export const generateMatrix = <T = number>(
   rows: number,
@@ -66,3 +66,12 @@ export const generateMatrix = <T = number>(
 
   return matrix;
 };
+
+/**
+ * Helper function to rotate/transpose a matrix
+ *
+ * @param  {Matrix<T>} matrix
+ * @returns {Matrix<T>}
+ */
+export const rotateMatrix = <T = number>(matrix: Matrix<T>): Matrix<T> =>
+  matrix[0].map((_val, index) => matrix.map((row) => row[index]).reverse());
