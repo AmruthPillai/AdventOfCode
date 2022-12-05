@@ -8,3 +8,4 @@
 | 2   | Password Philosophy | [Reference](https://adventofcode.com/2020/day/2) / [Solution](/events/2020/day-2/index.ts) |
 | 3   | Toboggan Trajectory | [Reference](https://adventofcode.com/2020/day/3) / [Solution](/events/2020/day-3/index.ts) |
 | 4   | Passport Processing | [Reference](https://adventofcode.com/2020/day/4) / [Solution](/events/2020/day-4/index.ts) |
+| 5   | Binary Boarding     | [Reference](https://adventofcode.com/2020/day/5) / [Solution](/events/2020/day-5/index.ts) |
