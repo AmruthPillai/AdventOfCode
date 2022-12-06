@@ -39,6 +39,15 @@ export const countBy = (array: any[]): Record<any, number> =>
   array.reduce((acc, val) => ({ ...acc, [val]: acc[val] + 1 || 1 }), {});
 
 /**
+ * Helper function to get the intersection of items between multiple arrays
+ *
+ * @param  {T[][]} array
+ * @returns {T[]}
+ */
+export const intersection = <T>(array: T[][]): T[] =>
+  array.reduce((a, b) => a.filter((c) => b.includes(c)));
+
+/**
  * Helper function to generate permutations given an array
  *
  * @param  {T[]} array

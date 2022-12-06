@@ -19,12 +19,26 @@ export const getCommonCharacter = (...strings: string[]): string =>
     .reduce((acc, char) => acc.filter((x) => char.includes(x)))
     .at(0);
 
+/**
+ * Helper function to get a string of unique characters from the given string
+ *
+ * @param  {string} string
+ * @returns {string}
+ */
+export const getUniqueString = (string: string): string =>
+  [...new Set(string.split(""))].join("");
+
+/**
+ * Helper function to check if a given string is unique
+ *
+ * @param  {string} string
+ * @returns {boolean}
+ */
 export const isUniqueString = (string: string): boolean => {
   const sortedString = string.split("").sort();
 
   for (let i = 0; i < sortedString.length; i++) {
     if (sortedString[i] !== sortedString[i + 1]) {
-      // eslint-disable-next-line no-continue
       continue;
     } else {
       return false;

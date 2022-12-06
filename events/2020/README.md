@@ -9,3 +9,4 @@
 | 3   | Toboggan Trajectory | [Reference](https://adventofcode.com/2020/day/3) / [Solution](/events/2020/day-3/index.ts) |
 | 4   | Passport Processing | [Reference](https://adventofcode.com/2020/day/4) / [Solution](/events/2020/day-4/index.ts) |
 | 5   | Binary Boarding     | [Reference](https://adventofcode.com/2020/day/5) / [Solution](/events/2020/day-5/index.ts) |
+| 6   | Custom Customs      | [Reference](https://adventofcode.com/2020/day/6) / [Solution](/events/2020/day-6/index.ts) |

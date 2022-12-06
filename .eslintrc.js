@@ -26,6 +26,7 @@ module.exports = {
     "no-eval": "off",
     "no-bitwise": "off",
     "no-console": "off",
+    "no-continue": "off",
     "no-plusplus": "off",
     "no-return-assign": "off",
     "no-useless-return": "off",
