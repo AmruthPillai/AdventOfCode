@@ -66,12 +66,3 @@ export const partOne = (input: string): number => {
 
   return searchBag.length - 1;
 };
-
-export const partTwo = (input: string): number => {
-  // Parse the input to get the list of rules for luggage processing
-  const rules = parseLuggageRules(input);
-
-  console.log(JSON.stringify(rules, null, 2));
-
-  return input.length;
-};
