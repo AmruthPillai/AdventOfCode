@@ -41,9 +41,7 @@ const getGameResult = (a: OpponentMove, b: PlayerMove): GameResult => {
 
 export const partOne = (input: string): number => {
   // Parse the input into a game matrix of single characters
-  const strategyGuideMatrix: string[][] = input
-    .split("\n")
-    .map((row) => row.split(" "));
+  const strategyGuideMatrix: string[][] = input.split("\n").map((row) => row.split(" "));
 
   // Keep track of the overall score of the player
   let score: number = 0;
@@ -74,9 +72,7 @@ export const partOne = (input: string): number => {
 
 export const partTwo = (input: string): number => {
   // Parse the input into a game matrix of single characters
-  const strategyGuideMatrix: string[][] = input
-    .split("\n")
-    .map((row) => row.split(" "));
+  const strategyGuideMatrix: string[][] = input.split("\n").map((row) => row.split(" "));
 
   // Keep track of the overall score of the player
   let score: number = 0;

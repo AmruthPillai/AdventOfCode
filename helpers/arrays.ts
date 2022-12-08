@@ -17,8 +17,7 @@ export const range = <T = any>(size: number, fill: T = null): Array<T> =>
  * @param  {number[]} array
  * @returns {number}
  */
-export const sum = (array: number[]): number =>
-  array.reduce((acc, val) => acc + val, 0);
+export const sum = (array: number[]): number => array.reduce((acc, val) => acc + val, 0);
 
 /**
  * Helper function to return the product of all numbers in an array
@@ -26,8 +25,7 @@ export const sum = (array: number[]): number =>
  * @param  {number[]} array
  * @returns {number}
  */
-export const product = (array: number[]): number =>
-  array.reduce((acc, val) => acc * val, 1);
+export const product = (array: number[]): number => array.reduce((acc, val) => acc * val, 1);
 
 /**
  * Helper function to count the number of repeated items in an array

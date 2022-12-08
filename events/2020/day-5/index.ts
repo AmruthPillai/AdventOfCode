@@ -14,26 +14,13 @@ const calculateCellNumber = (
   }
 
   if (string[index] === "F" || string[index] === "L") {
-    return calculateCellNumber(
-      string,
-      index + 1,
-      min,
-      min + length,
-      Math.floor(length / 2)
-    );
+    return calculateCellNumber(string, index + 1, min, min + length, Math.floor(length / 2));
   }
 
-  return calculateCellNumber(
-    string,
-    index + 1,
-    max - length,
-    max,
-    Math.floor(length / 2)
-  );
+  return calculateCellNumber(string, index + 1, max - length, max, Math.floor(length / 2));
 };
 
-const calculateSeatID = (row: number, column: number): number =>
-  row * 8 + column;
+const calculateSeatID = (row: number, column: number): number => row * 8 + column;
 
 const findMissingNumbers = (array: number[]): number[] => {
   const missingNumbers: number[] = [];

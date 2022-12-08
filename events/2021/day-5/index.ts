@@ -8,12 +8,7 @@ interface LineSegment {
 }
 
 // Get Intermediate Points given a Line Segment
-const getPointsFromLineSegment = ({
-  x1,
-  y1,
-  x2,
-  y2,
-}: LineSegment): Matrix<number> => {
+const getPointsFromLineSegment = ({ x1, y1, x2, y2 }: LineSegment): Matrix<number> => {
   let result = [
     [x1, y1],
     [x2, y2],
@@ -99,10 +94,7 @@ const getLineSegments = (
   return [lineSegments, matrixSize];
 };
 
-const countLineOverlap = (
-  lineSegments: LineSegment[],
-  matrixSize: number
-): number => {
+const countLineOverlap = (lineSegments: LineSegment[], matrixSize: number): number => {
   // Generate intermediate points given a line segment
   const pointsToBeMarked = [];
   for (const line of lineSegments) {

@@ -18,10 +18,7 @@ export const partOne = (input: string): number => {
     const secondCompartment = rucksack.substring(rucksack.length / 2);
 
     // Get the common item between both compartments, there can only be one
-    const commonCharacter = getCommonCharacter(
-      firstCompartment,
-      secondCompartment
-    );
+    const commonCharacter = getCommonCharacter(firstCompartment, secondCompartment);
 
     // Get the priority (weight) of the common character, and push it to an array
     itemPriorities.push(getItemPriority(commonCharacter));
@@ -43,11 +40,7 @@ export const partTwo = (input: string): number => {
     const thirdRucksack = rucksacks[i + 2];
 
     // Get the common item between all rucksacks, there can only be one
-    const commonCharacter = getCommonCharacter(
-      firstRucksack,
-      secondRucksack,
-      thirdRucksack
-    );
+    const commonCharacter = getCommonCharacter(firstRucksack, secondRucksack, thirdRucksack);
 
     // Get the priority (weight) of the common character, and push it to an array
     itemPriorities.push(getItemPriority(commonCharacter));

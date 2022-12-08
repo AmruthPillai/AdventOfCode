@@ -14,7 +14,6 @@ const isBetterString = (string: string): boolean => {
   return hasLetterPair && hasWedgedLetter;
 };
 
-export const partOne = (input: string): number => input.split('\n').filter(isNiceString).length;
+export const partOne = (input: string): number => input.split("\n").filter(isNiceString).length;
 
-export const partTwo = (input: string): number => input.split('\n').filter(isBetterString).length;
-
+export const partTwo = (input: string): number => input.split("\n").filter(isBetterString).length;

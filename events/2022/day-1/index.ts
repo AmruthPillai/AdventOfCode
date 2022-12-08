@@ -5,9 +5,7 @@ export const partOne = (input: string): number => {
   const readings = input.split("\n\n");
 
   // Parse each reading group into an array of numbers, then sum each array
-  const calories = readings
-    .map((reading) => reading.split("\n").map(Number))
-    .map(sum);
+  const calories = readings.map((reading) => reading.split("\n").map(Number)).map(sum);
 
   // Return the maximum number of calories in a single reading
   return Math.max(...calories);

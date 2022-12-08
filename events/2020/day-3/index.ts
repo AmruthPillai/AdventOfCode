@@ -1,10 +1,6 @@
 import { product } from "@helpers/arrays";
 
-const getNumberOfTreesInPath = (
-  map: string[][],
-  slopeX: number,
-  slopeY: number
-): number => {
+const getNumberOfTreesInPath = (map: string[][], slopeX: number, slopeY: number): number => {
   // Set a counter for the number of trees you've encountered
   let numTrees = 0;
 

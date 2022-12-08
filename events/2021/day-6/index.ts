@@ -1,9 +1,6 @@
 import { sum, countBy } from "@helpers/arrays";
 
-const getFishPopulationAfterNDays = (
-  initialFishAges: Array<number>,
-  numOfDays: number
-): number => {
+const getFishPopulationAfterNDays = (initialFishAges: Array<number>, numOfDays: number): number => {
   let fishAges = countBy(initialFishAges) as Record<number, number>;
 
   for (let day = 0; day < numOfDays; day++) {

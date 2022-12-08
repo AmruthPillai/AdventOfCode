@@ -87,9 +87,5 @@ export const partTwo = (input: string): number => {
   const remainingSpaceRequired = 30000000 - unusedSpaceLeft;
 
   // Return the minimum of the directory sizes which are above the required unused space limit
-  return Math.min(
-    ...[...directoryMap.values()].filter(
-      (size) => size >= remainingSpaceRequired
-    )
-  );
+  return Math.min(...[...directoryMap.values()].filter((size) => size >= remainingSpaceRequired));
 };

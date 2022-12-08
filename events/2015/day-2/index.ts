@@ -6,11 +6,9 @@ interface AreaProps {
   h: number;
 }
 
-const calculateMinArea = ({ l, w, h }: AreaProps) =>
-  Math.min(l * w, w * h, h * l);
+const calculateMinArea = ({ l, w, h }: AreaProps) => Math.min(l * w, w * h, h * l);
 
-const calculateSurfaceArea = ({ l, w, h }: AreaProps) =>
-  2 * l * w + 2 * w * h + 2 * h * l;
+const calculateSurfaceArea = ({ l, w, h }: AreaProps) => 2 * l * w + 2 * w * h + 2 * h * l;
 
 const calculateRibbonArea = ({ l, w, h }: AreaProps) =>
   2 * l + 2 * w + 2 * h - 2 * Math.max(l, w, h);

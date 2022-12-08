@@ -28,16 +28,8 @@ export const partTwo = (input: string): number => {
   // Loop through input array (size-3 sliding window)
   for (let i = 3; i < measurements.length; i++) {
     // Get the first and second 3-size sliding windows
-    const firstWindow = [
-      measurements[i - 3],
-      measurements[i - 2],
-      measurements[i - 1],
-    ];
-    const secondWindow = [
-      measurements[i - 2],
-      measurements[i - 1],
-      measurements[i],
-    ];
+    const firstWindow = [measurements[i - 3], measurements[i - 2], measurements[i - 1]];
+    const secondWindow = [measurements[i - 2], measurements[i - 1], measurements[i]];
 
     // Calculate the sum of the inputs in each each window
     const firstWindowSum = sum(firstWindow);

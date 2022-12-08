@@ -1,8 +1,4 @@
-import {
-  Matrix,
-  calculateMatrixSum,
-  checkMatrixEquality,
-} from "@helpers/matrix";
+import { Matrix, calculateMatrixSum, checkMatrixEquality } from "@helpers/matrix";
 
 const checkForWinner = (matrix: Matrix<number>) => {
   // Check Rows
@@ -22,10 +18,7 @@ const checkForWinner = (matrix: Matrix<number>) => {
   return false;
 };
 
-const removeMatrix = (
-  matrixToRemove: Matrix<number>,
-  matrices: Array<Matrix<number>>
-) => {
+const removeMatrix = (matrixToRemove: Matrix<number>, matrices: Array<Matrix<number>>) => {
   for (let i = 0; i < matrices.length; i++) {
     if (checkMatrixEquality(matrices[i], matrixToRemove)) {
       matrices.splice(i, 1);
@@ -42,9 +35,7 @@ export const partOne = (input: string): number => {
   // Process Input to Extract Matrices
   for (let i = 1; i < inputLines.length; i += 5) {
     const outerMatrix = inputLines.slice(i, i + 5);
-    const matrix = outerMatrix.map((x) =>
-      x.split(" ").filter(Boolean).map(Number)
-    );
+    const matrix = outerMatrix.map((x) => x.split(" ").filter(Boolean).map(Number));
     matrices.push(matrix);
   }
 
@@ -81,9 +72,7 @@ export const partTwo = (input: string): number => {
   // Process Input to Extract Matrices
   for (let i = 1; i < inputLines.length; i += 5) {
     const outerMatrix = inputLines.slice(i, i + 5);
-    const matrix = outerMatrix.map((x) =>
-      x.split(" ").filter(Boolean).map(Number)
-    );
+    const matrix = outerMatrix.map((x) => x.split(" ").filter(Boolean).map(Number));
     matrices.push(matrix);
   }
 

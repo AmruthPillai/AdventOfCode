@@ -8,14 +8,8 @@ export type Matrix<T> = Array<Array<T>>;
  * @param  {Matrix<any>} matrix2
  * @returns {boolean}
  */
-export const checkMatrixEquality = (
-  matrix1: Matrix<any>,
-  matrix2: Matrix<any>
-): boolean => {
-  if (
-    matrix1.length !== matrix2.length ||
-    matrix1[0].length !== matrix2[0].length
-  ) {
+export const checkMatrixEquality = (matrix1: Matrix<any>, matrix2: Matrix<any>): boolean => {
+  if (matrix1.length !== matrix2.length || matrix1[0].length !== matrix2[0].length) {
     return false;
   }
 

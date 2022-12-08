@@ -5,10 +5,7 @@ interface Position {
   y: number;
 }
 
-const getNewHouseFromDirection = (
-  currentPosition: Position,
-  direction: Direction
-): Position => {
+const getNewHouseFromDirection = (currentPosition: Position, direction: Direction): Position => {
   const { x, y } = currentPosition;
   let newPosition: Position;
 
@@ -74,10 +71,7 @@ export const partTwo = (input: string): number => {
       }
     } else {
       // Robo Santa's Turn
-      roboSantaPosition = getNewHouseFromDirection(
-        roboSantaPosition,
-        direction
-      );
+      roboSantaPosition = getNewHouseFromDirection(roboSantaPosition, direction);
 
       if (!isVisited(roboSantaPosition, visitedHouses)) {
         visitedHouses.push(roboSantaPosition);

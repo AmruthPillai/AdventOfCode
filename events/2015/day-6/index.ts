@@ -8,9 +8,9 @@ interface Instruction {
 
 const processInstruction = (instruction: string): Instruction => {
   const words = instruction.split(" ");
-  const command = (
-    instruction.startsWith("turn") ? words.splice(0, 2) : words.splice(0, 1)
-  ).join(" ") as "turn on" | "turn off" | "toggle";
+  const command = (instruction.startsWith("turn") ? words.splice(0, 2) : words.splice(0, 1)).join(
+    " "
+  ) as "turn on" | "turn off" | "toggle";
   const from = words[0].split(",").map(Number);
   const to = words[2].split(",").map(Number);
 

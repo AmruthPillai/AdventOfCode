@@ -11,6 +11,7 @@ specifiers:
   eslint-import-resolver-typescript: ^2.5.0
   eslint-plugin-import: ^2.25.3
   jest: ^27.4.3
+  prettier: ^2.8.1
   ts-jest: ^27.1.0
   ts-node: ^10.4.0
   tsconfig-paths: ^3.12.0
@@ -28,6 +29,7 @@ devDependencies:
   eslint-import-resolver-typescript: 2.7.1_ktrec6dplf4now6nlbc6d67jee
   eslint-plugin-import: 2.26.0_zakvy25bvwc2d644723rsy4ypy
   jest: 27.5.1_ts-node@10.9.1
+  prettier: 2.8.1
   ts-jest: 27.1.5_77ipd3snv4k74mx7o6ukgyhwia
   ts-node: 10.9.1_nrtalwllb7arcyjojfrpe56nyq
   tsconfig-paths: 3.14.1
@@ -3254,6 +3256,12 @@ packages:
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
     engines: {node: '>= 0.8.0'}
+    dev: true
+
+  /prettier/2.8.1:
+    resolution: {integrity: sha512-lqGoSJBQNJidqCHE80vqZJHWHRFoNYsSpP9AjFhlhi9ODCJA541svILes/+/1GM3VaL/abZi7cpFzOpdR9UPKg==}
+    engines: {node: '>=10.13.0'}
+    hasBin: true
     dev: true
 
   /pretty-format/27.5.1:

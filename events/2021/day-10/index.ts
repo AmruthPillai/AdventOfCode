@@ -90,9 +90,7 @@ export const partTwo = (input: string): number => {
     .map((x) => x.split(""))
     .filter(isValidDirection)
     .map(completeDirections)
-    .map((string) =>
-      string.reduce((acc, val) => 5 * acc + completionCharWeight[val], 0)
-    )
+    .map((string) => string.reduce((acc, val) => 5 * acc + completionCharWeight[val], 0))
     .sort((a, b) => a - b);
 
   return weights[Math.floor((weights.length - 1) / 2)];

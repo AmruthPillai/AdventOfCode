@@ -6,9 +6,7 @@ export const partOne = (input: string): number => {
   const inputLines = input.split("\n");
 
   // Create the matrix
-  const matrix: Matrix<number> = inputLines.map((line) =>
-    line.split("").map(Number)
-  );
+  const matrix: Matrix<number> = inputLines.map((line) => line.split("").map(Number));
 
   // Initialize Variables
   let gammaRate: string | number = "";
@@ -39,11 +37,7 @@ export const partOne = (input: string): number => {
 };
 
 // Use recursion to get the reduced matrix by most/least common bit
-const reduceByBit = (
-  matrix: Matrix<number>,
-  column: number = 0,
-  mostCommon: boolean = true
-) => {
+const reduceByBit = (matrix: Matrix<number>, column: number = 0, mostCommon: boolean = true) => {
   // Exit Criteria, if there is only one row in the matrix
   if (matrix.length === 1) {
     return matrix[0].join("");
@@ -71,9 +65,7 @@ export const partTwo = (input: string): number => {
   const inputLines = input.split("\n");
 
   // Create the matrix
-  const matrix: Matrix<number> = inputLines.map((line) =>
-    line.split("").map(Number)
-  );
+  const matrix: Matrix<number> = inputLines.map((line) => line.split("").map(Number));
 
   // Use the recursion function to get both values
   // Convert binary string to decimal using parseInt(num, 2)

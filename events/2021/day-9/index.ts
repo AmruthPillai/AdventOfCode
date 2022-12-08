@@ -10,19 +10,13 @@ const getAdjacentCells = (grid: Matrix<number>, x: number, y: number) =>
   ].filter(([row, col]) => grid[row] && grid[row][col] !== undefined);
 
 export const partOne = (input: string): number => {
-  const heightMap: Matrix<number> = input
-    .split("\n")
-    .map((row) => row.split("").map(Number));
+  const heightMap: Matrix<number> = input.split("\n").map((row) => row.split("").map(Number));
 
   const lowPoints = [];
 
   for (let i = 0; i < heightMap.length; i++) {
     for (let j = 0; j < heightMap[i].length; j++) {
-      if (
-        getAdjacentCells(heightMap, i, j).every(
-          ([x, y]) => heightMap[x][y] > heightMap[i][j]
-        )
-      ) {
+      if (getAdjacentCells(heightMap, i, j).every(([x, y]) => heightMap[x][y] > heightMap[i][j])) {
         lowPoints.push(heightMap[i][j]);
       }
     }
@@ -40,8 +34,7 @@ const getBasinSize = (grid: Matrix<number>, start: number[]) => {
   while (queue.length > 0) {
     const [x, y] = queue.shift() || [];
     const points = getAdjacentCells(grid, x, y).filter(
-      ([i, j]) =>
-        !visited.has(`${[i, j]}`) && grid[i][j] >= grid[x][y] && grid[i][j] < 9
+      ([i, j]) => !visited.has(`${[i, j]}`) && grid[i][j] >= grid[x][y] && grid[i][j] < 9
     );
 
     points.forEach((point) => visited.add(`${point}`));
@@ -52,19 +45,13 @@ const getBasinSize = (grid: Matrix<number>, start: number[]) => {
 };
 
 export const partTwo = (input: string): number => {
-  const heightMap: Matrix<number> = input
-    .split("\n")
-    .map((row) => row.split("").map(Number));
+  const heightMap: Matrix<number> = input.split("\n").map((row) => row.split("").map(Number));
 
   const lowPoints: Matrix<number> = [];
 
   for (let i = 0; i < heightMap.length; i++) {
     for (let j = 0; j < heightMap[i].length; j++) {
-      if (
-        getAdjacentCells(heightMap, i, j).every(
-          ([x, y]) => heightMap[x][y] > heightMap[i][j]
-        )
-      ) {
+      if (getAdjacentCells(heightMap, i, j).every(([x, y]) => heightMap[x][y] > heightMap[i][j])) {
         lowPoints.push([i, j]);
       }
     }

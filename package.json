@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "A humble documentation of my attempts at solving the Advent of Code each year, written in Typescript.",
   "scripts": {
+    "lint": "eslint --fix . && prettier -w .",
     "test": "jest",
     "ts-node": "ts-node"
   },
@@ -19,6 +20,7 @@
     "eslint-import-resolver-typescript": "^2.5.0",
     "eslint-plugin-import": "^2.25.3",
     "jest": "^27.4.3",
+    "prettier": "^2.8.1",
     "ts-jest": "^27.1.0",
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.12.0",

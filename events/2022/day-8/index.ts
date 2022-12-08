@@ -3,7 +3,9 @@ import { Matrix } from "@helpers/matrix";
 
 export const partOne = (input: string): number => {
   // Parse the input into a matrix of numbers
-  const forestGrid: Matrix<number> = input.split("\n").map((line) => line.split("").map((num) => parseInt(num, 10)));
+  const forestGrid: Matrix<number> = input
+    .split("\n")
+    .map((line) => line.split("").map((num) => parseInt(num, 10)));
   const gridSize = forestGrid.length;
 
   // Keep a count of the number of trees that are visible
@@ -84,7 +86,9 @@ const calculateScenicScore = (grid: Matrix<number>, rowIndex: number, colIndex: 
 
 export const partTwo = (input: string): number => {
   // Parse the input into a matrix of numbers
-  const forestGrid: Matrix<number> = input.split("\n").map((line) => line.split("").map((num) => parseInt(num, 10)));
+  const forestGrid: Matrix<number> = input
+    .split("\n")
+    .map((line) => line.split("").map((num) => parseInt(num, 10)));
   const gridSize = forestGrid.length;
 
   const scenicScores: number[] = [];

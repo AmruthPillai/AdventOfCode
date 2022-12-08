@@ -6,5 +6,4 @@ import { readFileSync } from "fs";
  * @param  {string} filepath
  * @returns {string}
  */
-export const readFile = (filepath: string): string =>
-  readFileSync(filepath, "utf-8");
+export const readFile = (filepath: string): string => readFileSync(filepath, "utf-8");

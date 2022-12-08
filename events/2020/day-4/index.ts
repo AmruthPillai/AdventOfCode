@@ -17,10 +17,7 @@ type Passport = {
   cid?: string;
 };
 
-const validatePassportProperty = (
-  key: keyof Passport,
-  value: string
-): boolean => {
+const validatePassportProperty = (key: keyof Passport, value: string): boolean => {
   if (key === "byr") {
     const byr = Number(value);
     return byr >= 1920 && byr <= 2002;
@@ -91,15 +88,7 @@ export const partOne = (input: string): number => {
     });
 
   // Store an array of required fields in a passport
-  const requiredFields: Array<keyof Passport> = [
-    "byr",
-    "iyr",
-    "eyr",
-    "hgt",
-    "hcl",
-    "ecl",
-    "pid",
-  ];
+  const requiredFields: Array<keyof Passport> = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"];
 
   // Store a counter of number of valid passports found
   let numValidPassports = 0;
@@ -139,15 +128,7 @@ export const partTwo = (input: string): number => {
     });
 
   // Store an array of required fields in a passport
-  const requiredFields: Array<keyof Passport> = [
-    "byr",
-    "iyr",
-    "eyr",
-    "hgt",
-    "hcl",
-    "ecl",
-    "pid",
-  ];
+  const requiredFields: Array<keyof Passport> = ["byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"];
 
   // Store a counter of number of valid passports found
   let numValidPassports = 0;

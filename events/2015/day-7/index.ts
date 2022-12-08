@@ -37,8 +37,7 @@ const getEmulatedSignal = (circuit: Circuit, wire: Wire): number => {
   return emulate(wire);
 };
 
-export const partOne = (input: string): number =>
-  getEmulatedSignal(parseCircuit(input), "a");
+export const partOne = (input: string): number => getEmulatedSignal(parseCircuit(input), "a");
 
 export const partTwo = (input: string): number => {
   const circuit = parseCircuit(input);

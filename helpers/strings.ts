@@ -25,8 +25,7 @@ export const getCommonCharacter = (...strings: string[]): string =>
  * @param  {string} string
  * @returns {string}
  */
-export const getUniqueString = (string: string): string =>
-  [...new Set(string.split(""))].join("");
+export const getUniqueString = (string: string): string => [...new Set(string.split(""))].join("");
 
 /**
  * Helper function to check if a given string is unique
