@@ -1,5 +1,3 @@
-import { range } from "@helpers/arrays";
-
 type Instruction = { move: number; from: number; to: number };
 
 export const partOne = (input: string): string => {
@@ -15,7 +13,7 @@ export const partOne = (input: string): string => {
   stacks.pop();
 
   const numColumns = stacks[stacks.length - 1].length;
-  const stackMatrix = range<string[]>(numColumns, []);
+  const stackMatrix = new Array<string[]>(numColumns).fill([]);
 
   for (let i = 0; i < stacks.length; i++) {
     for (let j = 0; j < numColumns; j++) {
@@ -74,7 +72,7 @@ export const partTwo = (input: string): string => {
   stacks.pop();
 
   const numColumns = stacks[stacks.length - 1].length;
-  const stackMatrix = range<string[]>(numColumns, []);
+  const stackMatrix = new Array<string[]>(numColumns).fill([]);
 
   for (let i = 0; i < stacks.length; i++) {
     for (let j = 0; j < numColumns; j++) {

@@ -1,15 +1,16 @@
 import { Matrix } from "./matrix";
 
 /**
- * Helper function to return an array of size N
- * Can be used to loop over numbers, generate placholder arrays, etc.
+ * Helper function to return an array with a sequence of numbers
+ * similar to Python's range function
  *
- * @param  {number} size
- * @param  {T = null} fill
- * @returns {Array<T>}
+ * @param  {number} start
+ * @param  {number} stop
+ * @param  {number} step = 1
+ * @returns {number[]}
  */
-export const range = <T = any>(size: number, fill: T = null): Array<T> =>
-  new Array<T>(size).fill(fill);
+export const range = (start: number, stop: number, step: number = 1): number[] =>
+  Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
 
 /**
  * Helper function to return sum of all numbers in an array
