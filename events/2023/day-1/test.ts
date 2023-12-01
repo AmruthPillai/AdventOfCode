@@ -5,21 +5,22 @@ import { partOne, partTwo } from "./index";
 
 describe("AoC 2023 / Day XX: <Challenge Title>", () => {
   const input = readFile(join(__dirname, "input.txt"));
-  const sample = readFile(join(__dirname, "sample.txt"));
 
   test("Part One (Sample)", () => {
-    expect(partOne(sample)).toEqual(0);
+    const sample = readFile(join(__dirname, "sample-part1.txt"));
+    expect(partOne(sample)).toEqual(142);
   });
 
   test("Part One", () => {
-    expect(partOne(input)).toEqual(0);
+    expect(partOne(input)).toEqual(54632);
   });
 
   test("Part Two (Sample)", () => {
-    expect(partTwo(sample)).toEqual(0);
+    const sample = readFile(join(__dirname, "sample-part2.txt"));
+    expect(partTwo(sample)).toEqual(281);
   });
 
   test("Part Two", () => {
-    expect(partTwo(input)).toEqual(0);
+    expect(partTwo(input)).toEqual(54019);
   });
 });
