@@ -44,10 +44,10 @@ export const calculateMatrixSum = (matrix: Matrix<number>): number =>
  * @param  {any = 0} fill
  * @returns {Matrix<T>}
  */
-export const generateMatrix = <T = number>(
+export const generateMatrix = <T = any>(
   rows: number,
   columns: number = rows,
-  fill: any = 0
+  fill: any = 0,
 ): Matrix<T> => {
   const matrix: Matrix<T> = [];
 

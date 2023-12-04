@@ -10,6 +10,7 @@ A humble documentation of my attempts at solving the Advent of Code each year, w
 | [2020](/events/2020) |
 | [2021](/events/2021) |
 | [2022](/events/2022) |
+| [2023](/events/2023) |
 
 ### Prerequisites
 
