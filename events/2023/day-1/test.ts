@@ -3,7 +3,7 @@ import { readFile } from "@helpers/files";
 
 import { partOne, partTwo } from "./index";
 
-describe("AoC 2023 / Day 01: Trebuchet?!", () => {
+describe("AoC 2023 / Day 1: Trebuchet?!", () => {
   const input = readFile(join(__dirname, "input.txt"));
 
   test("Part One (Sample)", () => {

@@ -3,7 +3,7 @@ import { readFile } from "@helpers/files";
 
 import { partOne, partTwo } from "./index";
 
-describe("AoC 2023 / Day 03: Gear Ratios", () => {
+describe("AoC 2023 / Day 3: Gear Ratios", () => {
   const input = readFile(join(__dirname, "input.txt"));
   const sample = readFile(join(__dirname, "sample.txt"));
 
